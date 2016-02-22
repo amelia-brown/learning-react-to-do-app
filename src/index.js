@@ -4,6 +4,6 @@ import React from 'react';
 import Root from 'containers/root';
 
 ReactDOM.render(
-  <div><Root /></div>,
+  <Root />,
   document.getElementById('mount')
 );

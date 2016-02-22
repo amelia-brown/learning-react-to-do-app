@@ -70,6 +70,9 @@ var config = {
 
 if (ENV === 'production') {
   config = _.extend({}, config, {
+    plugins: [
+      new webpack.optimize.UglifyJsPlugin(),
+    ],
   });
 } else {
   config = _.extend({}, config, {
