@@ -30,7 +30,7 @@ app.get('*', function(req, res) {
 });
 
 app.listen(PORT, function(error) {
-  if (error) return console.log('ERROR', error);
+  if (error) return console.log('⚠️ - Error - ', error);
 
-  console.log(`Server listening on port ${PORT}`);
+  console.log(`🌍 - Server listening on port ${PORT}`);
 });
