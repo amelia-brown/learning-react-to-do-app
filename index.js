@@ -7,6 +7,9 @@ const ROOT_PATH = path.resolve(__dirname);
 
 const app = express();
 
+app.set('view engine', 'jade');
+app.set('views', path.join(ROOT_PATH, 'views'));
+
 if (ENV === 'production') {
   app.use('/lib', express.static(path.join(ROOT_PATH, 'lib')));
 } else {
@@ -21,9 +24,6 @@ if (ENV === 'production') {
 
   app.use(require("webpack-hot-middleware")(compiler));
 }
-
-app.set('view engine', 'jade');
-app.set('views', path.join(ROOT_PATH, 'views'));
 
 app.get('*', function(req, res) {
   res.render('index');
