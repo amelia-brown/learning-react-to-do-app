@@ -1,13 +1,13 @@
 import React, {Component, PropTypes} from 'react';
-import Greeting from 'components/greeting';
-import Alert from 'components/alert';
+import List from 'components/list';
+import ListForm from 'components/list-form';
 
 export default class Root extends Component {
   render() {
     return (
       <div className="root">
-        <Greeting name='Amelia' />
-        <Alert statement='You suck and I hate you' />
+        <ListForm />
+        <List />
       </div>
     );
   }
