@@ -1,4 +1,8 @@
 import React, {Component, PropTypes} from 'react';
+// Here you are trying to use TodoList without importing it first.
+/*
+import TodoList from 'components/list';
+*/
 
 var ListForm = React.createClass({
   getInitialState: function() {

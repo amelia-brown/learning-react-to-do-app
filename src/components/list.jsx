@@ -9,4 +9,14 @@ var List = React.createClass({
   }
 });
 
+// so the error you are getting here has to do with not having the expected
+// type of the prop defined. How we can remedy this is by using React's
+// predefined type system to assign the expected type in the class definition.
+
+/*
+List.propTypes = {
+  items: PropTypes.array,
+};
+*/
+
 module.exports = List;
