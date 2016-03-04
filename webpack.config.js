@@ -6,6 +6,7 @@ var precss = require('precss');
 var calc = require('postcss-calc');
 var cssnext = require('postcss-cssnext');
 var normalize = require('postcss-normalize');
+const NpmInstallPlugin = require('npm-install-webpack-plugin');
 
 const ENV = process.env.NODE_ENV;
 const ROOT_PATH = path.resolve(__dirname);
@@ -88,3 +89,13 @@ if (ENV === 'production') {
 }
 
 module.exports = config;
+
+if(TARGET === 'start' || !TARGET) {
+  module.exports = merge(common, {
+    plugins: [
+      new NpmInstallPlugin({
+        save: true
+      })
+    ]
+  });
+}
