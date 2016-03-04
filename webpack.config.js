@@ -22,6 +22,13 @@ var config = {
     publicPath: 'http://localhost:3000/lib/'
   },
   module: {
+    preLoaders: [
+      {
+        test: /\.jsx?/,
+        exclude: /node_modules/,
+        loader: 'eslint',
+      },
+    ],
     loaders: [
       {
         test: /\.jsx?$/,
